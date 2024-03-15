@@ -1,0 +1,29 @@
+{
+  "name": "ul-shopify-mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.ts",
+    "api": "mocha --require ts-node/register ./src/spec/***.test.ts --timeout=30000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@wdio/cli": "^8.32.3",
+    "axios": "^1.6.7",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@types/chai": "^4.3.12",
+    "@wdio/allure-reporter": "^8.32.2",
+    "@wdio/local-runner": "^8.32.3",
+    "@wdio/mocha-framework": "^8.32.3",
+    "chai": "^4.3.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}
