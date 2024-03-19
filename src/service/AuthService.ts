@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { BaseService } from './BaseService';
+import { LoginCredentials } from '../models/request/LoginCredentials'
 
 export class AuthService extends BaseService{
-    async login(email: string, password: string): Promise<any> {
+    async login(requestData: LoginCredentials): Promise<any> {
         const url : string = `${this.getBaseUrl()}/api/auth/login`;
-        const data = { email, password };
 
         try {
-            const response = await axios.post(url, data);
+            const response = await axios.post(url, requestData);
             return response.data;
         } catch (error) {
             throw error;
