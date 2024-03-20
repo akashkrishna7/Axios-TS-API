@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
-    "api": "mocha --require ts-node/register ./src/spec/***.test.ts --timeout=30000"
+    "api": "mocha --require ts-node/register ./src/spec/***.test.ts --timeout=30000",
+    "single": "ENV=dev mocha --require ts-node/register src/spec/PositiveLogin.test.ts --timeout=10000"
   },
   "keywords": [],
-  "author": "",
+  "author": "Akash Krishna",
   "license": "ISC",
   "dependencies": {
     "@types/axios": "^0.14.0",
