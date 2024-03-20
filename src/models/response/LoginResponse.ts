@@ -1,3 +1,5 @@
+import { BaseResponse } from "../../exports/responseExports";
+
 interface UserIdentity {
     identityId: string;
     id: string;
@@ -44,7 +46,7 @@ interface SessionData {
     user: UserData;
 }
 
-export interface LoginResponse {
+export interface LoginResponse extends BaseResponse{
     data: {
         user: UserData;
         session: SessionData;
