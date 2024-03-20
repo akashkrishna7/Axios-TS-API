@@ -8,4 +8,4 @@
  */
 
 // Login Credentials customType
-export type { LoginCredentials } from '../models/request/LoginCredentials.ts';
+export type { LoginCredentials } from '../models/request/login/LoginCredentials.ts';

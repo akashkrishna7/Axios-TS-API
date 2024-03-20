@@ -1,4 +1,4 @@
-import { BaseResponse } from "../../exports/responseExports";
+import { BaseResponse } from "../../../exports/responseExports";
 
 interface UserIdentity {
     identityId: string;

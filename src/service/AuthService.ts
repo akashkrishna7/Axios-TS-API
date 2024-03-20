@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { BaseService } from './BaseService';
-import { LoginCredentials } from '../models/request/LoginCredentials'
+import { LoginCredentials } from '../models/request/login/LoginCredentials'
 import { LoginResponse } from '../exports/responseExports';
 
 // import { log } from 'winston';
@@ -13,7 +13,7 @@ export class AuthService extends BaseService{
             const response = await axios.post(url, requestData);
             
             const loginResponse: LoginResponse = response.data;
-            
+
             loginResponse.status = response.status;
             loginResponse.statusText = response.statusText;
 
