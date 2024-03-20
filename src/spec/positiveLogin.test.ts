@@ -12,20 +12,18 @@ describe('Login', () => {
     });
 
     it('should login successfully', async () => {
-        //  Get the environment from the command line argument or default to 'dev'
         const environment = process.env.ENV;
 
-        console.log(environment);
-
         const requestData: LoginCredentials = {
-            email: loginCredentialsJson.validCredentials[environment].username,
+            email: loginCredentialsJson.validCredentials[environment].email,
             password: loginCredentialsJson.validCredentials[environment].password
         };
 
-        console.log(requestData);
-
         const response: LoginResponse = await authService.login(requestData);
-        expect(response).to.exist;
-        expect(response.data.session).to.have.property('access_token').that.is.a('string');
+        
+        expect(response, 'Response should not be null').to.be.not.null;
+        expect(response.status).to.equal(200, "The status code does not match");
+        expect(response.data.session).to.have.property('access_token').that.is.a('string', "The session type is not of string");
+        expect(response.data.user.email).to.equal(requestData.email, "The response email does not match");
     });
 });
