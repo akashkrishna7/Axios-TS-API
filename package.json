@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
-    "api": "mocha --require ts-node/register src/testSetup/setup.ts ./src/spec/***.test.ts --timeout=30000",
-    "single": "ENV=dev mocha --require ts-node/register src/testSetup/setup.ts src/spec/PositiveLogin.test.ts --timeout=10000"
+    "api": "mocha --require ts-node/register src/testSetup/setup.ts ./src/spec/***/***.test.ts --timeout=30000",
+    "single": "ENV=dev mocha --require ts-node/register src/testSetup/setup.ts src/spec/cart/GetCart.test.ts --timeout=10000"
   },
   "keywords": [],
   "author": "Akash Krishna",

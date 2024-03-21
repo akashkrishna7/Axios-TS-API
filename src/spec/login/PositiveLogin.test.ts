@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import { AuthService } from '../service/AuthService';
-import { LoginCredentials } from '../exports/requestsExports';
-import { loginCredentialsJson } from '../exports/jsonExports'
-import { LoginResponse } from '../exports/responseExports';
+import { AuthService } from '../../service/AuthService';
+import { LoginCredentials } from '../../exports/requestsExports';
+import { loginCredentialsJson } from '../../exports/jsonExports'
+import { LoginResponse } from '../../exports/responseExports';
 
 describe('Login', () => {
     let authService: AuthService;

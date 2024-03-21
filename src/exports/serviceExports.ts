@@ -12,3 +12,7 @@ export { BaseService } from '../service/BaseService'
 
 // Auth Service
 export { AuthService } from '../service/AuthService'
+
+//Cart Service
+export { CartService } from "../service/CartService";
+
