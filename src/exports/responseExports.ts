@@ -15,3 +15,6 @@ export type { ErrorResponse } from '../models/response/base/ErrorResponse.ts';
 
 // Login Response
 export type { LoginResponse } from '../models/response/login/LoginResponse.ts';
+
+// Cart Response
+export type { CartResponse } from '../models/response/cart/CartResponse.ts'

@@ -9,6 +9,8 @@ import { LoginResponse } from '../exports/responseExports';
 let accessToken: string;
 
 before(async () => {
+    console.log("SETUP STARTED");
+    
     const authService = new AuthService();
     const environment = process.env.ENV;
 
@@ -24,4 +26,4 @@ before(async () => {
 export function getAccessToken(): string {
     return accessToken;
 }
-console.log("SETUP STARTED");
+
