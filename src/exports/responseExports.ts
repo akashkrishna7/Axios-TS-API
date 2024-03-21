@@ -14,4 +14,4 @@ export type { BaseResponse } from '../models/response/base/BaseResponse.ts';
 export type { ErrorResponse } from '../models/response/base/ErrorResponse.ts';
 
 // Login Response
-export type { LoginResponse } from '../models/response/LoginResponse.ts';
+export type { LoginResponse } from '../models/response/login/LoginResponse.ts';

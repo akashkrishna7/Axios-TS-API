@@ -20,10 +20,10 @@ describe('Login', () => {
         };
 
         const response: LoginResponse = await authService.login(requestData);
-        
+
         expect(response, 'Response should not be null').to.be.not.null;
         expect(response.status).to.equal(200, "The status code does not match");
         expect(response.data.session).to.have.property('access_token').that.is.a('string', "The session type is not of string");
-        expect(response.data.user.email).to.equal(requestData.email, "The response email does not match");
+        expect(response.data.user.email.toString()).to.equal(requestData.email, "The response email does not match");
     });
 });

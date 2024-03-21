@@ -7,8 +7,8 @@
  * maintainability.
  */
 
-// Base URL
-export { default as baseUrlJson } from '../resources/testData/baseUrl.json'
+// Base Service
+export { BaseService } from '../service/BaseService'
 
-// Login Credentials
-export { default as loginCredentialsJson } from '../resources/testData/loginCredentials.json'
+// Auth Service
+export { AuthService } from '../service/AuthService'
