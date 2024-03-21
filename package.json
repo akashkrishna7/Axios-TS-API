@@ -1,12 +1,12 @@
 {
-  "name": "ul-shopify-mobile",
+  "name": "ul-shopify-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
-    "api": "mocha --require ts-node/register ./src/spec/***.test.ts --timeout=30000",
-    "single": "ENV=dev mocha --require ts-node/register src/spec/PositiveLogin.test.ts --timeout=10000"
+    "api": "mocha --require ts-node/register src/testSetup/setup.ts ./src/spec/***.test.ts --timeout=30000",
+    "single": "ENV=dev mocha --require ts-node/register src/testSetup/setup.ts src/spec/PositiveLogin.test.ts --timeout=10000"
   },
   "keywords": [],
   "author": "Akash Krishna",
@@ -15,6 +15,7 @@
     "@types/axios": "^0.14.0",
     "@wdio/cli": "^8.32.3",
     "axios": "^1.6.7",
+    "typescript-json-schema": "^0.63.0",
     "winston": "^3.11.0"
   },
   "devDependencies": {

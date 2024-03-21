@@ -38,7 +38,7 @@ interface UserData {
 }
 
 interface SessionData {
-    accessToken: string;
+    access_token: string;
     tokenType: string;
     expiresIn: number;
     expireAat: number;

@@ -1,12 +1,10 @@
 import axios from 'axios';
-import { BaseService } from './BaseService';
-import { LoginCredentials } from '../models/request/login/LoginCredentials'
+import { BaseService } from '../exports/serviceExports';
+import { LoginCredentials } from '../exports/requestsExports'
 import { LoginResponse } from '../exports/responseExports';
-
-// import { log } from 'winston';
-
 export class AuthService extends BaseService{
     async login(requestData: LoginCredentials): Promise<any> {
+        
         const url : string = `${this.getBaseUrl()}/api/auth/login`;
 
         try {
