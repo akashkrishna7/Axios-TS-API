@@ -1,5 +1,8 @@
 {
     "dev": {
         "baseUrl": "https://www.apicademy.dev"
+    },
+    "qa": {
+        "baseUrl": "https://www.apicademy.qa"
     }
 }

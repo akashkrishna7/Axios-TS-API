@@ -6,7 +6,7 @@ export class AuthService extends BaseService{
     async login(requestData: LoginCredentials): Promise<any> {
         
         const url : string = `${this.getBaseUrl()}/api/auth/login`;
-
+        
         try {
             const response = await axios.post(url, requestData);
             
@@ -17,7 +17,8 @@ export class AuthService extends BaseService{
 
             return loginResponse;
         } catch (error) {
-            throw error;
+            console.error("Error in login:", error);
+            throw new Error("Error in login:: " + error.message);
         }
     }
 }
