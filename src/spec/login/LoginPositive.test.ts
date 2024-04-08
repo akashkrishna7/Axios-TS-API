@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { AuthService } from '../../service/AuthService';
+import { AuthService } from '../../exports/serviceExports';
 import { LoginCredentials } from '../../exports/requestsExports';
 import { loginCredentialsJson } from '../../exports/jsonExports'
 import { LoginResponse } from '../../exports/responseExports';
